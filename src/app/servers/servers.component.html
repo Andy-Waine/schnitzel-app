@@ -1,3 +1,23 @@
+<label>Server Name</label>
+<input 
+type="text" 
+class="form-control"
+[(ngModel)]="serverName"
+>
+
+<p>{{ serverName }}</p>
+
+<button 
+    class="btn btn-primary"
+    [disabled]="!allowNewServer"
+    (click)="onCreateServer()"
+>Add Server</button>
+
+
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>{{ serverCreationStatus }}</p>
+
+
 <p>(<app-server></app-server>) Nested within the Servers Component!</p>
 <p>(<app-server></app-server>) Nested within the Servers Component!</p>
 
