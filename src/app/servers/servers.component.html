@@ -18,6 +18,12 @@ class="form-control"
 <p>{{ serverCreationStatus }}</p>
 
 
-<p>(<app-server></app-server>) Nested within the Servers Component!</p>
-<p>(<app-server></app-server>) Nested within the Servers Component!</p>
+<p> Nested within the Servers Component!</p>
+<ng-template #noServer>
+    <p>Nested within the Servers Component!</p>
+</ng-template>
+
+<!--below loops through servers array and applies the result to the server varibale-->
+<app-server *ngFor="let server of servers"></app-server>
+<app-server></app-server>
 
